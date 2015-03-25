@@ -1,1 +1,0 @@
-{"description": "nomlib's integrated build system for Sublime Text", "dependencies": [], "sublime_text": "*", "version": "1.0.0", "platforms": ["*"], "url": "https://github.com/i8degrees/nomlib-sublime-text"}

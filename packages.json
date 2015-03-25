@@ -1,0 +1,22 @@
+{
+  "schema_version": "3.0.0",
+  "packages":
+  [
+    {
+      "details": "https://github.com/i8degrees/nomlib_sublime_text",
+      "labels": [ "ttcards", "build system" ],
+      "author": [ "i8degrees" ],
+      "donate": null,
+      "buy": null,
+      "releases":
+      [
+        {
+          "platforms": [ "osx" ],
+          "sublime_text": "*",
+          "dependencies": [],
+          "tags": true
+        }
+      ]
+    }
+  ]
+}
