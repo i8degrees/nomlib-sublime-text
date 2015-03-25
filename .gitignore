@@ -1,0 +1,11 @@
+# temporary project data
+tmp
+*.bck
+
+# OS X metadata
+.DS_Store
+.LSOverride
+
+# Sublime Text metadata
+.sublime-workspace
+
