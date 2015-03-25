@@ -38,7 +38,7 @@ A build system works on Mac OS X only and should be available by default. To run
 
 ## TODO
 
-- [ ] Rename package to **nomlib_sublime_text**; this implies that we probably ought to rename our package directory, too. We might as well rename the github repository, since it hasn't been around very long.
+- [x] Rename package to **nomlib_sublime_text**; this implies that we probably ought to rename our package directory, too. We might as well rename the github repository, since it hasn't been around very long.
 
 - [ ] xcode_nomlib.sublime-build: figure out what we want to do with the potential dependency [xcpretty](https://github.com/supermarin/xcpretty) -- in any case, an absolute path to the local rbenv / gem path isn't going to cut it!
 - [ ] xcode_nomlib.sublime-build: clean up variants, i.e.: 'Test', 'Run'.
