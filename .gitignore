@@ -1,5 +1,6 @@
 # temporary project data
 tmp
+backup/
 *.bck
 
 # OS X metadata
