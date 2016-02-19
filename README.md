@@ -45,8 +45,11 @@ A build system works on Mac OS X only and should be available by default. To run
 
 - [ ] Finish writing README.md.
 - [ ] Distribute our local color scheme (Dark Soda)?
-- [ ] Pull out local nom types from our C.tmLanguage, C++.tmLanguage files and 
+- [x] Pull out local nom types from our C.tmLanguage, C++.tmLanguage files and
 distribute?
+- [ ] Backport .sublime-syntax additions to .tmLanguage for Sublime Text 2
+compatibilty?
+- [ ] Convert RCSS.tmLanguage, RML.tmLanguage to .sublime-syntax?
 
 - [ ] Review [Package Control: Submitting a Package](https://packagecontrol.io/docs/submitting_a_package) documentation.
 - [ ] Make mention of this repository in nomlib's README.md once published.
