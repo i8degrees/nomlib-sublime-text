@@ -3,8 +3,10 @@
   "working_dir": "${project_path}\\build",
   "shell": true,
   "file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$",
-  "selector": "source.c, source.c++",
   "cmd": [ "..\\bin\\msbuild_install.bat"],
+  "selector": "source.c, source.c++",
+  // "syntax": "Packages/nomlib_sublime_text.git/C++.tmLanguage",
+  "keyfiles": [ "CMakeLists.txt" ],
 
   "variants":
   [

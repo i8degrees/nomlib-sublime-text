@@ -1,25 +1,34 @@
 {
   "working_dir": "${project_path}/build",
-  "path": "/usr/bin:/usr/sbin:/bin:/usr/local/bin:${HOME}/.rbenv/versions/1.9.3-p0/bin",
+  "path": "/usr/bin:/usr/sbin:/bin:/usr/local/bin",
   "shell": true,
   "file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$",
-
-  // "cmd": [ "../bin/xcode_build.sh Debug && ../bin/xcode_install.sh Debug | xcpretty --simple && exit ${PIPESTATUS[0]}" ],
-  // "cmd": [ "NUM_THREADS=6 ../bin/xcode_build.sh Debug && ../bin/xcode_install.sh Debug | xcpretty --simple" ],
-
-  // FIXME: Only one shell script can be called here! Sublime Text && Unix
-  // pipes do not appear to get along very well :-/
-
-  // NOTE: Shell output from our build scripts will not show up when xcpretty
-  // is in use (called).
-  "cmd": [ "NUM_THREADS=2 ../bin/xcode_install.sh Debug | xcpretty --simple"],
-  // "selector": "source.c, source.c++",
+  "cmd": [ "NUM_THREADS=9 ../bin/xcode_install.sh Debug"],
+  "selector": "source.c, source.c++",
+  // "syntax": "Packages/nomlib_sublime_text.git/C++.tmLanguage",
+  "keyfiles": [ "CMakeLists.txt" ],
 
   "variants":
   [
     {
+      "name": "gen",
+      "cmd": [ "../bin/configure.sh Debug 'Xcode'" ]
+    },
+
+    {
+      "name": "gen_release",
+      "cmd": [ "../bin/configure.sh Release 'Xcode'" ]
+    },
+
+    {
       "name": "Clean",
-      "cmd": [ "../bin/xcode_uninstall.sh Debug; ../bin/xcode_clean.sh Debug; ../bin/xcode_gen.sh Debug" ]
+      "cmd": [ "../bin/xcode_uninstall.sh Debug" ]
+    },
+
+    {
+      "name": "distclean",
+      // TODO(jeff): Implement script; xcode_distclean.sh
+      "cmd": [ "../bin/xcode_distclean.sh Debug" ]
     },
 
     {
