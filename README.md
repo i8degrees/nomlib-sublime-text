@@ -1,4 +1,6 @@
-# Integrated Build System for nomlib (Sublime Text)
+# Sublime Text Project Settings for nomlib and ttcards
+
+## Integrated Build System for nomlib
 
 **IMPORTANT:** This package is **incomplete** and should not be used at the moment! I have published it so that I can continue testing things and wrap up the last remaining TODO issues.
 
@@ -6,29 +8,29 @@
 
 This [Sublime Text](http://www.sublimetext.com/) package adds build tools, ... for the [nomlib](https://github.com/i8degrees/nomlib) game engine.
 
-## Installation
+### Installation
 
-### Package Control
+#### Package Control
 
 1. Make sure you already have [Package Control](http://wbond.net/sublime_packages/package_control/) installed.
 2. Choose “*Install Package*” from the Command Palette (```Ctrl+Shift+P``` on Windows/Linux, ```⇧⌘P``` on OS X).
 3. Select “*nomlib_sublime_text*” and press ```Enter```.
 
-### GitHub
+#### GitHub
 
 1. Change to your Sublime Text ```Packages``` directory.
 2. Clone repository ```git clone https://github.com/i8degrees/nomlib_sublime_text.git```.
 
-### Manual installation
+#### Manual
 
 1. Download the files using the GitHub ```.zip``` download option.
 2. Unzip the files to your Sublime Text ```Packages``` directory.
 
-## Usage
+### Usage
 
 *...STUB...*
 
-### Build System
+#### Build System
 
 A build system works on Mac OS X only and should be available by default. To run your script press ```⌘+B``` or build from the *Tools* menu.
 
@@ -37,6 +39,8 @@ A build system works on Mac OS X only and should be available by default. To run
 *...STUB...*
 
 ## TODO
+
+- [ ] This repository presently holds both [nomlib](https://github.com/i8degrees/nomlib) and [ttcards](https://github.com/i8degrees/ttcards) project settings. At some point, we ought to split the two into their own respective repositories.
 
 - [x] Rename package to **nomlib_sublime_text**; this implies that we probably ought to rename our package directory, too. We might as well rename the github repository, since it hasn't been around very long.
 
