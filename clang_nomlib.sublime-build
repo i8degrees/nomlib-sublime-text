@@ -1,0 +1,68 @@
+{
+  "working_dir": "${project_path}/build",
+  "path": "/usr/bin:/usr/sbin:/bin:/usr/local/bin",
+  "shell": true,
+  "file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$",
+  "cmd": [ "NUM_THREADS=9 ../bin/clang_install.sh Debug"],
+  "selector": "source.c, source.c++",
+  "keyfiles": [ "CMakeLists.txt" ],
+
+  "variants":
+  [
+    {
+      "name": "gen",
+      "cmd": [ "../bin/configure.sh Debug" ]
+    },
+
+    {
+      "name": "gen_release",
+      "cmd": [ "../bin/configure.sh Release 'Unix Makefiles'" ]
+    },
+
+    {
+      "name": "Clean",
+      "cmd": [ "../bin/clang_clean.sh Debug" ]
+    },
+
+    {
+      "name": "distclean",
+      "cmd": [ "../bin/clang_distclean.sh Debug" ]
+    },
+
+    {
+      "name": "Install",
+      "cmd": [ "../bin/clang_install.sh Debug" ]
+    },
+
+    {
+      "name": "Uninstall",
+      "cmd": [ "../bin/clang_uninstall.sh Debug" ]
+    },
+
+    {
+      "name": "Test",
+      "cmd": [ "echo 'NOTE: Test variant has been disabled.'" ]
+      // "cmd": [ "CTEST_OUTPUT_ON_FAILURE=true NOM_COLORS=false xcodebuild -configuration Debug -target RUN_TESTS" ]
+    },
+
+    {
+      "name": "LOC",
+      "cmd": [ "cloc --quiet --exclude-dir=scale2x,hqx,jsoncpp,build,build-release,extra,third-party,tmp,wiki,Resources ${project_path}" ]
+    },
+
+    {
+      "name": "Run",
+      "cmd": [ "echo 'NOTE: Run variant has been disabled.'" ]
+      // "cmd": [ "${project_path}/build/tests/Debug/ActionTest -id --gtest_filter=*MoveByAction-" ]
+    },
+
+    {
+      // Do not highlight warnings or errors
+      "file_regex": "",
+      // Highlight warnings and errors
+      // "file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$",
+      "name": "Docs",
+      "cmd": [ "../bin/clang_docs.sh Debug" ]
+    }
+  ]
+}
