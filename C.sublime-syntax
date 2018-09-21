@@ -186,7 +186,7 @@ contexts:
       scope: storage.type.c
     - match: \b(uchar|sint|uint|sint_ptr|uint_ptr|int32_ptr|uint32_ptr)\b
       scope: storage.type.c
-    - match: \b(int_ptr|void_ptr|NOM_ISA|real32|real64|size_type)\b
+    - match: \b(int_ptr|void_ptr|NOM_ISA|real32|real64|size_type|duration_t)\b
       scope: storage.type.c
     - match: \b(nil)\b
       scope: support.type.mac-classic.c
